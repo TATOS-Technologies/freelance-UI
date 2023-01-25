@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:freelance/config/routes/routes.dart';
 import 'package:freelance/config/themes/colors.dart';
 import 'package:freelance/constants/asset_path.dart';
 import 'package:freelance/modules/dashboard/screens/home_screem/widgets/home_appbar.dart';
 import 'package:freelance/modules/dashboard/screens/home_screem/widgets/tab_bar_tile_widget.dart';
 import 'package:freelance/modules/dashboard/screens/home_screem/widgets/tab_bar_widget.dart';
 import 'package:freelance/widgets/common_truck_tile.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'widgets/home_filter_tile.dart';
@@ -58,7 +60,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ),
                    HomeGrid(
                     children: [
-                      const CommontTruckTile(
+                       CommontTruckTile(
+                        onTap: () {
+                          context.push(AppRoutes.transactionLogs);
+                        },
                         title: '1730',
                         subTitle: 'CANCELLED',
                       ),

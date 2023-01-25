@@ -11,6 +11,7 @@ class AssetsPath {
   static const String filterIconSvg = "assets/svg/filter_icon.svg";
   static const String truckIconSvg = "assets/svg/truck_icon.svg";
   static const String docIconSvg = "assets/svg/doc_icon.svg";
+  static const String backIconSvg = "assets/svg/back_icon.svg";
 
   //png
   static const String userAvatar = "assets/images/user_avatar.png";
