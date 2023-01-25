@@ -20,9 +20,17 @@ class NavBarWidget extends StatelessWidget {
       builder: (context, state) {
         return GestureDetector(
           child: Container(
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(.1),
+                    blurRadius: 40.w,
+                    offset: const Offset(0,-2)
+
+                  )
+                ],
+                borderRadius:const BorderRadius.only(
                     topLeft: Radius.circular(25), topRight: Radius.circular(25))),
             height: 80.h,
             width: double.infinity,
