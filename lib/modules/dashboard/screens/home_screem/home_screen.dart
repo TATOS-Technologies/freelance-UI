@@ -11,6 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'widgets/home_filter_tile.dart';
 import 'widgets/home_grid_one.dart';
+import 'widgets/loading_widget.dart';
 import 'widgets/port_tile_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,7 +47,6 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               color: Colors.white,
               padding: EdgeInsets.all(20.w),
               child: Column(
-                
                 children: [
                   TabBarWidget(tabController: tabController),
                   SizedBox(
@@ -56,12 +56,107 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   SizedBox(
                     height: 20.h,
                   ),
-                  const HomeGridOne(),
+                   HomeGrid(
+                    children: [
+                      const CommontTruckTile(
+                        title: '1730',
+                        subTitle: 'CANCELLED',
+                      ),
+                      CommontTruckTile(
+                        title: '365',
+                        titleSize: 18.sp,
+                        subTitle: 'IN TRANSIT',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '15',
+                        titleSize: 18.sp,
+                        subTitle: 'AT SAFETY CHECK',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                    ],
+                  ),
                   SizedBox(
                     height: 20.h,
                   ),
-                  
-
+                  const LoadingWidget(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  HomeGrid(
+                    children: [
+                      const CommontTruckTile(
+                        title: '32',
+                        subTitle: 'RM GATE SECURITY',
+                      ),
+                     const CommontTruckTile(
+                        title: '111',
+                        subTitle: 'AT WEIGHT',
+                      ),
+                      CommontTruckTile(
+                        title: '0',
+                        titleSize: 20.sp,
+                        subTitle: 'IN PARKING LOT',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '0',
+                        titleSize: 18.sp,
+                        subTitle: 'AT TIPPLER',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '0',
+                        titleSize: 18.sp,
+                        subTitle: 'IN STOCK YARDS',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.bold,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '0',
+                        titleSize: 18.sp,
+                        subTitle: 'AT TARE WEIGHT',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.bold,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '3',
+                        titleSize: 18.sp,
+                        subTitle: 'AT EXIT GATE',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '202',
+                        titleSize: 18.sp,
+                        subTitle: 'IN PLANT',
+                        titleFontWeight: FontWeight.bold,
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                      CommontTruckTile(
+                        title: '2789',
+                        subTitle: 'COMPLETED',
+                        subTitleFontWeight: FontWeight.normal,
+                        subTitleSize: 14.sp,
+                      ),
+                     
+                    ],
+                  ),
+                  SizedBox(
+                    height: 90.h,
+                  ),
                 ],
               ),
             )
@@ -71,4 +166,3 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 }
-

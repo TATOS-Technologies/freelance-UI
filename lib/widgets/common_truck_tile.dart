@@ -67,7 +67,7 @@ class CommontTruckTile extends StatelessWidget {
             fit: FlexFit.tight,
             flex: 1,
             child: Padding(
-              padding:  EdgeInsets.only(top: 5.w),
+              padding:  EdgeInsets.only(top: 5.w,left: 20.w,right: 20.w),
               child: Text(
                 subTitle,
                 textAlign: TextAlign.center,
