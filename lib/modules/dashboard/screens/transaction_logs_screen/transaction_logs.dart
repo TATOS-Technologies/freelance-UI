@@ -21,7 +21,7 @@ class TransactionLogsScreen extends StatelessWidget {
           preferredSize: Size.fromHeight(70.h),
           child: const AppbarWidget(),
         ),
-        body: Padding(
+        body: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: FixedTimeline.tileBuilder(
             theme: TimelineThemeData(
