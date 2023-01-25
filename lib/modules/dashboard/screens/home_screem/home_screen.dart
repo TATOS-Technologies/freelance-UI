@@ -12,28 +12,42 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize:Size.fromHeight(70.h),
+        preferredSize: Size.fromHeight(70.h),
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white
-          ),
+          decoration: const BoxDecoration(color: Colors.white),
           child: Row(
             children: [
+              SizedBox(
+                width: 20.w,
+              ),
               Center(
                 child: CommonIconButton(
-                  onTap: () {
-                    
-                  },
+                  onTap: () {},
                   iconPath: AssetsPath.drawerIcon,
                 ),
               ),
-            Text(
+              SizedBox(
+                width: 20.w,
+              ),
+              Text(
                 'Trip Sheet',
                 style: GoogleFonts.raleway(
-                    fontSize: 24.sp,
-                    color: AppColor.titleBlue,),
+                  fontSize: 24.sp,
+                  color: AppColor.titleBlue,
+                ),
               ),
-           
+              const Spacer(),
+              CommonIconButton(onTap: () {}, iconPath: AssetsPath.searchIcon),
+              SizedBox(
+                width: 20.w,
+              ),
+              const CircleAvatar(
+                backgroundImage: AssetImage(AssetsPath.userAvatar),
+
+              ),
+              SizedBox(
+                width: 20.w,
+              ),
             ],
           ),
         ),
@@ -41,4 +55,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
