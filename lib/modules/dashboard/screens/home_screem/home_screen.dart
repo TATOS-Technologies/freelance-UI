@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            const HomeFilterTile(),
+            HomeFilterTile(),
             Container(
               color: Colors.white,
               padding: EdgeInsets.all(20.w),
